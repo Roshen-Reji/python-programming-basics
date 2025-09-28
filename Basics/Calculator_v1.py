@@ -1,4 +1,5 @@
 import math
+print("Here you Can use various mathematical tools like Arithemetic,Selections,Factorials etc. ", "For Arithematic Operations use  +,-,X,x,*,/,÷.", "For Non-Arithematic Operations use sqrt,Sqrt,!,cbrt,Cbrt,√,fact.", "For Selections use Combination,C,c,Comb,p,Permutation,permute,P.",sep="\n",end="\n")
 def main():
   num_1 = float(input("Enter the first number: "))
   char_1 = input("Enter the operator: ")
