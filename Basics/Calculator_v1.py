@@ -9,6 +9,8 @@ def main():
     non_arith(num_1,char_1)
   elif char_1 in ("Combination","C","c","Comb","p","Permutation","permute","P"):
     selection(num_1,char_1)
+  elif char_1 in ("matrix"):
+    matrices(num_1)
 def arith(num_1,char_1):## used the same Variables for easier recognition 
   num_2 = float(input("Enter the Second Number: "))
   match char_1:
@@ -48,4 +50,20 @@ def selection(num_1,char_1):
       print(f"{int(num_1)} P {int(num_2)} = {math.perm(int(num_1),int(num_2))}")
     case "C"|"c"|"Combination"|"comb":
       print(f"{int(num_1)} C {int(num_2)} = {math.comb(int(num_1),int(num_2))}")
+def matrices(c1r1):
+  import numpy as mat
+  c2r1 = int(input("Enter the element at coloumn 2 row 1"))
+  c1r2 = int(input("Enter the element at coloumn 1 row 2"))
+  c2r2 = int(input("Enter the element at coloumn 2 row 2"))
+  opp = input("Enter the operation to  be done")
+  A = mat.array[c1r1,c2r1,c1r2,c2r2]
+  match opp:
+    case "+":
+      C1R1 = int(input("Enter the element at coloumn 1 row 1 of matrix B"))
+      C2R1 = int(input("Enter the element at coloumn 2 row 1 of matrix B"))
+      C1R2 = int(input("Enter the element at coloumn 1 row 2 of matrix B"))
+      C2R2 = int(input("Enter the element at coloumn 2 row 2 of matrix B"))
+      B = mat.array[C1R1,C2R1,C1R2,C2R2]
+      print(A+B)
+
 main()
