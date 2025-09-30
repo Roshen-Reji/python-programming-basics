@@ -1,5 +1,5 @@
 import math
-print("Here you Can use various mathematical tools like Arithemetic,Selections,Factorials etc. ", "For Arithematic Operations use  +,-,X,x,*,/,÷.", "For Non-Arithematic Operations use sqrt,Sqrt,!,cbrt,Cbrt,√,fact.", "For Selections use Combination,C,c,Comb,p,Permutation,permute,P.",sep="\n",end="\n")
+print("Here you Can use various mathematical tools like Arithemetic,Selections,Factorials etc. ", "For Arithematic Operations use  +,-,X,x,*,/,÷.", "For Non-Arithematic Operations use sqrt,Sqrt,!,cbrt,Cbrt,√,fact.", "For Selections use Combination,C,c,Comb,p,Permutation,permute,P.","For matrix use matrix then input the type of operation ",sep="\n",end="\n")
 def main():
   num_1 = float(input("Enter the first number: "))
   char_1 = input("Enter the operator: ")
@@ -66,5 +66,28 @@ def matrices(c1r1):
       C2R2 = int(input("Enter the element at column 2 row 2 of matrix B"))
       B = mat.array([[C1R1,C2R1],[C1R2,C2R2]])
       print(A+B)
-
+    case "-":
+      C1R1 = int(input("Enter the element at column 1 row 1 of matrix B"))
+      C2R1 = int(input("Enter the element at column 2 row 1 of matrix B"))
+      C1R2 = int(input("Enter the element at column 1 row 2 of matrix B"))
+      C2R2 = int(input("Enter the element at column 2 row 2 of matrix B"))
+      B = mat.array([[C1R1,C2R1],[C1R2,C2R2]])
+      print(A-B)
+    case "*"|"x"|"X":
+      C1R1 = int(input("Enter the element at column 1 row 1 of matrix B"))
+      C2R1 = int(input("Enter the element at column 2 row 1 of matrix B"))
+      C1R2 = int(input("Enter the element at column 1 row 2 of matrix B"))
+      C2R2 = int(input("Enter the element at column 2 row 2 of matrix B"))
+      B = mat.array([[C1R1,C2R1],[C1R2,C2R2]])
+      print(A@B)
+    case "inv"|"inverse"|"^-1":
+      print(mat.linalg.inv(A))
+    case "det"|"determinent"|"||":
+      print(mat.linalg.det(A))
+    case "transpose"|"T":
+      print(A.T)
+    case "adj":
+      cofactor_matrix = mat.linalg.inv(A).T * mat.linalg.det(A)
+      adjoint = cofactor_matrix.T  
+      print(adjoint)
 main()
