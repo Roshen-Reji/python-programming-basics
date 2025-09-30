@@ -56,14 +56,15 @@ def matrices(c1r1):
   c1r2 = int(input("Enter the element at coloumn 1 row 2"))
   c2r2 = int(input("Enter the element at coloumn 2 row 2"))
   opp = input("Enter the operation to  be done")
-  A = mat.array[c1r1,c2r1,c1r2,c2r2]
+  A = mat.array([[c1r1, c2r1], [c1r2, c2r2]])
+
   match opp:
     case "+":
       C1R1 = int(input("Enter the element at coloumn 1 row 1 of matrix B"))
       C2R1 = int(input("Enter the element at coloumn 2 row 1 of matrix B"))
       C1R2 = int(input("Enter the element at coloumn 1 row 2 of matrix B"))
       C2R2 = int(input("Enter the element at coloumn 2 row 2 of matrix B"))
-      B = mat.array[C1R1,C2R1,C1R2,C2R2]
+      B = mat.array([[C1R1,C2R1],[C1R2,C2R2]])
       print(A+B)
 
 main()
