@@ -11,6 +11,8 @@ def main():
     selection(num_1,char_1)
   elif char_1 in ("matrix"):
     matrices(num_1)
+  elif char_1 in ("sin","cos","tan","sec","cosec"):
+    trigonometry(num_1,char_1)
 def arith(num_1,char_1):## used the same Variables for easier recognition 
   num_2 = float(input("Enter the Second Number: "))
   match char_1:
@@ -90,4 +92,12 @@ def matrices(c1r1):
       cofactor_matrix = mat.linalg.inv(A).T * mat.linalg.det(A)
       adjoint = cofactor_matrix.T  
       print(adjoint)
+def trigonometry(num_1,char_1):
+  match char_1:
+    case "sin":
+      print(f"The sin of {num_1} is {math.sin(num_1)}")
+    case "cos":
+      print(f"The cos of {num_1} is {math.cos(num_1)}")
+    case "tan":
+      print(f"The tan of {num_1} is {math.tan(num_1)}")
 main()
